@@ -1,11 +1,12 @@
 # EO-NeRF
 
-&#x231b; Warning: This code has been sitting in the fridge for a while. We are trying to clean it up and document it properly little by little.
+&#x231b; Warning &#x231b; This code has been in the fridge for a while. We are cleaning it up and documenting it little by little. Please be patient.
 
 ### [[Project page]](https://rogermm14.github.io/eonerf/)
 
-Developed at the [ENS Paris-Saclay, Centre Borelli](https://www.centreborelli.fr/) and accepted at the [CVPR EarthVision Workshop 2023](https://www.grss-ieee.org/events/earthvision-2023/).
-This project follows our previous work: [Sat-NeRF](https://centreborelli.github.io/satnerf/)
+&#128295; Developed at the [ENS Paris-Saclay, Centre Borelli](https://www.centreborelli.fr/) and accepted at the [CVPR EarthVision Workshop 2023](https://www.grss-ieee.org/events/earthvision-2023/).
+
+This project follows our previous work [Sat-NeRF (2022)](https://centreborelli.github.io/satnerf/) and was recently used in &#128293; [S-EO (2025)](https://centreborelli.github.io/shadow-eo/) &#128293; to further leverage shadow predictions for improved 3D reconstructions from satellite images.
 
 ### [Multi-Date Earth Observation NeRF: The Detail Is in the Shadows](https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf)
 *[Roger Marí](https://scholar.google.com/citations?user=TgpSmIsAAAAJ&hl=en), 
@@ -49,6 +50,8 @@ Example command to train EO-NeRF on the area of interest JAX_068 using the DFC20
 ```shell
 (eonerf) $ bash run_JAX_RGB.sh JAX_068
 ```
+Remember to update run_JAX_RGB.sh with your own data paths. Example data directories can be downloaded from [SatNeRF](https://github.com/centreborelli/satnerf/releases/tag/EarthVision2022).
+
 ---
 
 ## 3. Testing
