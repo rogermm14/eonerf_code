@@ -1,0 +1,14 @@
+imageio
+numpy
+tqdm
+Ninja
+tensorboard
+rasterio
+rpcm
+utm
+gdal
+plyflatten
+opencv-contrib-python
+pyproj=="3.0.1"
+argparse
+fire
