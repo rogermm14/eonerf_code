@@ -1,7 +1,8 @@
 # EO-NeRF
-
+---
 &#x231b; Warning &#x231b; This code has been in the fridge for a while. We are cleaning it up and documenting it little by little. Please be patient.
 
+---
 ### [[Project page]](https://rogermm14.github.io/eonerf/)
 
 &#128295; Developed at the [ENS Paris-Saclay, Centre Borelli](https://www.centreborelli.fr/) and accepted at the [CVPR EarthVision Workshop 2023](https://www.grss-ieee.org/events/earthvision-2023/).
