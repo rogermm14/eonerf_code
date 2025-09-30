@@ -54,6 +54,7 @@ Example command to train EO-NeRF on the area of interest JAX_068 using the DFC20
 (eonerf) $ bash run_JAX_RGB.sh JAX_068
 ```
 Remember to update run_JAX_RGB.sh with your own data paths. `run_JAX_NEW.sh` and `run_IARPA.sh` can be used in the same way.
+
 ---
 
 ## 3. Testing
