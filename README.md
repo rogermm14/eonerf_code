@@ -1,13 +1,13 @@
-# EO-NeRF
+# EO-NeRF code :earth_americas: :mag:
 ---
-&#x231b; Warning &#x231b; This code has been in the fridge for a while. We are cleaning it up and documenting it little by little. Please be patient.
+:hourglass: Warning :hourglass: This code has been in the fridge for a while. We are cleaning it up and documenting it little by little. Please be patient.
 
 ---
 ### [[Project page]](https://rogermm14.github.io/eonerf/)
 
-&#128295; Developed at the [ENS Paris-Saclay, Centre Borelli](https://www.centreborelli.fr/) and accepted at the [CVPR EarthVision Workshop 2023](https://www.grss-ieee.org/events/earthvision-2023/).
+:wrench: Developed at the [ENS Paris-Saclay, Centre Borelli](https://www.centreborelli.fr/) and accepted at the [CVPR EarthVision Workshop 2023](https://www.grss-ieee.org/events/earthvision-2023/).
 
-This project follows our previous work [Sat-NeRF (2022)](https://centreborelli.github.io/satnerf/) and was recently used in &#128293; [S-EO (2025)](https://centreborelli.github.io/shadow-eo/) &#128293; to further leverage shadow predictions for improved 3D reconstructions from satellite images.
+This project follows our previous work [Sat-NeRF (2022)](https://centreborelli.github.io/satnerf/) and was recently used in :fire: [S-EO (2025)](https://centreborelli.github.io/shadow-eo/) :fire: to further leverage shadow predictions for improved 3D reconstructions from satellite images.
 
 ### [Multi-Date Earth Observation NeRF: The Detail Is in the Shadows](https://openaccess.thecvf.com/content/CVPR2023W/EarthVision/papers/Mari_Multi-Date_Earth_Observation_NeRF_The_Detail_Is_in_the_Shadows_CVPRW_2023_paper.pdf)
 *[Roger Marí](https://scholar.google.com/citations?user=TgpSmIsAAAAJ&hl=en), 
@@ -59,7 +59,7 @@ Remember to update run_JAX_RGB.sh with your own data paths. `run_JAX_NEW.sh` and
 
 ## 3. Testing
 
-Use the `eval_eonerf.py` script to generate the outputs of a pretrained EO-NeRF model. This script generates the learned dsm and rgb/shadow renderings. 
+Use the `eval_eonerf.py` script to generate the outputs of a pretrained EO-NeRF model. This script generates the output dsm and rgb/shadow renderings. 
 
 ---
 
