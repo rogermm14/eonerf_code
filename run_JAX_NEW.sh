@@ -6,7 +6,7 @@ timestamp=$(date +"%Y-%m-%d_%H-%M-%S")
 aoi_id=$1
 suffix=$2
 dataset=JAX_NEW
-gpu_id=0
+gpu_id=1
 downsample_factor=2
 n_samples=128
 n_importance=0
@@ -14,18 +14,21 @@ fc_units=256
 training_iters=300000
 batch_size=1024
 
-# set paths
-errs="$aoi_id"_errors.txt
-root_dir="/mnt/adisk/roger/Datasets/SatNeRF/root_dir/crops_rpcs_ba_v2/$aoi_id"
-cache_dir="/mnt/adisk/roger/Datasets/SatNeRF/cache_dir_utm/crops_rpcs_ba_v2/"$aoi_id"_ds"$downsample_factor
-img_dir="/mnt/adisk/roger/Datasets/DFC2019/Track3-NEW-crops/$aoi_id"
+# input paths
+datasetdir=/mnt/adisk/roger/Datasets
+root_dir=$datasetdir"/SatNeRF/root_dir/crops_rpcs_ba_v2/"$aoi_id
+cache_dir=$datasetdir"/SatNeRF/cache_dir_utm/crops_rpcs_ba_v2/"$aoi_id"_ds"$downsample_factor
+img_dir=$datasetdir"/DFC2019/Track3-NEW-crops/$aoi_id"
+gt_dir=$datasetdir"/DFC2019/Track3-Truth"
+shadow_masks_dir=$datasetdir"/DFC2019/Shadows-pred_v2/Track3-NEW-crops/"$aoi_id
+
+# output paths
 out_dir="/mnt/adisk/roger/eonerfacc_logs_latest"
-gt_dir="/mnt/adisk/roger/Datasets/DFC2019/Track3-Truth"
-shadow_masks_dir="/mnt/adisk/roger/Datasets/DFC2019/Shadows-pred_v2/Track3-NEW-crops/"$aoi_id
 logs_dir=$out_dir/logs
 ckpts_dir=$out_dir/ckpts
 errs_dir=$out_dir/errs
 mkdir -p $errs_dir
+errs="$aoi_id"_errors.txt
 
 # input arguments
 model="eo-nerf"

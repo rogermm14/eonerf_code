@@ -14,18 +14,21 @@ fc_units=256
 training_iters=500000
 batch_size=1024
 
-# set paths
-errs="$aoi_id"_errors.txt
-root_dir="/mnt/adisk/roger/Datasets/SatNeRF_IARPA/root_dir/rpcs_ba/$aoi_id"
-cache_dir="/mnt/adisk/roger/Datasets/SatNeRF_IARPA/cache_dir_utm/rpcs_ba/"$aoi_id"_ds"$downsample_factor
-img_dir="/mnt/adisk/roger/Datasets/SatNeRF_IARPA/crops/"$aoi_id
+# input paths
+datasetdir=/mnt/adisk/roger/Datasets
+root_dir=$datasetdir"/SatNeRF_IARPA/root_dir/rpcs_ba/"$aoi_id
+cache_dir=$datasetdir"/SatNeRF_IARPA/cache_dir_utm/rpcs_ba/"$aoi_id"_ds"$downsample_factor
+img_dir=$datasetdir"/SatNeRF_IARPA/crops/"$aoi_id
+gt_dir=$datasetdir"/SatNeRF_IARPA/Truth"
+shadow_masks_dir=$datasetdir"/SatNeRF_IARPA/Shadows-pred_v2/"$aoi_id
+
+# output paths
 out_dir="/mnt/adisk/roger/eonerfacc_logs_latest"
-gt_dir="/mnt/adisk/roger/Datasets/SatNeRF_IARPA/Truth"
-shadow_masks_dir="/mnt/adisk/roger/Datasets/SatNeRF_IARPA/Shadows-pred_v2/"$aoi_id
 logs_dir=$out_dir/logs
 ckpts_dir=$out_dir/ckpts
 errs_dir=$out_dir/errs
 mkdir -p $errs_dir
+errs="$aoi_id"_errors.txt
 
 # input arguments
 model="eo-nerf"

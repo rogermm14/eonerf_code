@@ -59,7 +59,7 @@ Remember to update run_JAX_RGB.sh with your own data paths. `run_JAX_NEW.sh` and
 
 ## 3. Testing
 
-Use the `eval_eonerf.py` script to generate the outputs of a pretrained EO-NeRF model. This script generates the output dsm and rgb/shadow renderings. 
+Use the `eval_eonerf.py` script to generate the outputs of a pretrained EO-NeRF model. This script generates the output dsm and rgb/shadow renderings.
 
 ---
 
