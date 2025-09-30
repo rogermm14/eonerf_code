@@ -42,6 +42,8 @@ JAX_RGB was originally used in Sat-NeRF (Marí et al., 2022). EO-NeRF incorporat
 
 Only the image and json directories are needed to train EO-NeRF. GT data is only used for evaluation.
 
+All RPC camera models were bundle adjusted using https://github.com/centreborelli/sat-bundleadjust (Marí et al., 2021).
+
 2025 extension: Shadow segmentation masks generated with 
 "S-EO: A Large-Scale Dataset for Geometry-Aware Shadow Detection in Remote Sensing Applications" (Masquil et al., 2025) are included for shadow supervision, which can help improve the output 3D geometry. The shadow segmentation masks can be found in `DFC2019/Shadows-pred_v2`and `SatNeRF_IARPA/Shadows-pred_v2`.
 
