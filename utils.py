@@ -14,7 +14,6 @@ from nerfacc import OccGridEstimator
 #from nerfacc import OccGridEstimator, sampling, rendering
 
 from PIL import Image
-import cv2
 import torchvision.transforms as T
 
 def set_random_seed(seed):
@@ -154,14 +153,15 @@ def normalize_im(x, uint8=False):
         x_ = np.clip(x_, 0, 255)
     return x_
 
-def visualize_depth(depth, cmap=cv2.COLORMAP_JET):
+def visualize_depth(depth, cmap="jet_r"):
     """
     depth: (H, W) or (H,W,1)
     """
-    depth = depth.cpu().numpy()
+    import matplotlib.cm as cm
+    depth = depth.squeeze().cpu().numpy()
     x = np.nan_to_num(depth) # change nan to 0
     x = normalize_im(x, uint8=True)
-    x = np.array(Image.fromarray(cv2.applyColorMap(x, cmap)))/255.
-    x = torch.from_numpy(x)
+    cmap_fn = cm.get_cmap(cmap)
+    colored = cmap_fn(x / 255.0)[:, :, :3]  # drop alpha channel
+    x = torch.from_numpy(colored.astype(np.float32))
     return x
-

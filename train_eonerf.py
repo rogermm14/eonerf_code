@@ -1,13 +1,8 @@
-"""
-Copyright (c) 2022 Ruilong Li, UC Berkeley.
-"""
-
 import argparse
 import math
 import pathlib
 import time
 
-import imageio
 import numpy as np
 import torch
 import torch.nn.functional as F
