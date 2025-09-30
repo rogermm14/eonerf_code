@@ -30,7 +30,7 @@ If you find this code or work helpful, please cite:
 ---
 
 
-## 1. Setup
+## 1. Setup and Data
 
 To create the conda environment you can use the setup script, e.g.
 ```
@@ -41,7 +41,9 @@ Warning: If some libraries are not found, it may be necessary to update the envi
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib
 ```
-where `$CONDA_PREFIX` is the path to your conda or miniconda environment (e.g. `/mnt/cdisk/roger/miniconda3/envs/satnerf`).
+where `$CONDA_PREFIX` is the path to your conda or miniconda environment (e.g. `/home/roger/miniconda3/envs/eonerf`).
+
+Data download is available [here](https://drive.google.com/drive/folders/1t9FkN1dzxKdDu4nWRCs39C1qDoT0vaUO?usp=sharing). Please check the [data description](DATA.md).
 
 ---
 
@@ -51,8 +53,7 @@ Example command to train EO-NeRF on the area of interest JAX_068 using the DFC20
 ```shell
 (eonerf) $ bash run_JAX_RGB.sh JAX_068
 ```
-Remember to update run_JAX_RGB.sh with your own data paths. Example data directories can be downloaded from [SatNeRF](https://github.com/centreborelli/satnerf/releases/tag/EarthVision2022).
-
+Remember to update run_JAX_RGB.sh with your own data paths. `run_JAX_NEW.sh` and `run_IARPA.sh` can be used in the same way.
 ---
 
 ## 3. Testing
